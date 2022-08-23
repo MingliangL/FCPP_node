@@ -44,7 +44,13 @@ target_link_libraries(${PROJECT_NAME}
     )
 
 add_executable(FCPP_node src/FCPP_node.cpp)
+add_executable(FCPP_logger src/fcpp_logger.cpp)
 target_link_libraries(FCPP_node
+    ${catkin_LIBRARIES}
+    ${Boost_LIBRARIES}
+    ${PROJECT_NAME}
+)
+target_link_libraries(FCPP_logger
     ${catkin_LIBRARIES}
     ${Boost_LIBRARIES}
     ${PROJECT_NAME}

@@ -11,6 +11,7 @@
 #include <costmap_2d/costmap_2d.h>
 #include <nav_core/base_global_planner.h>
 #include <nav_msgs/Path.h>
+#include <nav_msgs/GetPlan.h>
 #include <nav_msgs/GetMap.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/TransformStamped.h>

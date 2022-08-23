@@ -271,7 +271,7 @@ bool SpiralSTC::makePlan(const geometry_msgs::PoseStamped& start, const geometry
   // (also controlled by planner_frequency parameter in move_base namespace)
 
   ROS_INFO("Publishing plan!");
-  publishPlan(plan);
+  publishPlan(plan); // Just for visualization purpose. 
   ROS_INFO("Plan published!");
   ROS_DEBUG("Plan published");
 
