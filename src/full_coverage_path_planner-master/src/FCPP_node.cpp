@@ -36,7 +36,7 @@ bool planSrv(nav_msgs::GetPlan::Request &plan_req, nav_msgs::GetPlan::Response &
     if(!fcpp_->makePlan(plan_req.start, plan_req.goal, fcpp_plan))
         return false;
     
-    path_file.open("src/fcpp_plan.csv"); // TODO: Make the directory configurable by .yaml
+    path_file.open("fcpp_plan.csv"); // TODO: Make the directory configurable by .yaml
     for(geometry_msgs::PoseStamped point : fcpp_plan) {
         path_file << point.pose.position.x << "," << point.pose.position.y << "," << //
             point.pose.orientation.z << "," << point.pose.orientation.w << "\n" ;
