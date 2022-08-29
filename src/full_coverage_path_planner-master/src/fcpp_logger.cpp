@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
     ros::ServiceClient plan_client = nh.serviceClient<nav_msgs::GetPlan>("fcpp_plan");
 
-    geometry_msgs::TransformStamped start_trans = tf_buff_.lookupTransform("base_link", "map", ros::Time::now(), ros::Duration(3.0));
+    geometry_msgs::TransformStamped start_trans = tf_buff_.lookupTransform("map", "base_link", ros::Time::now(), ros::Duration(3.0));
     geometry_msgs::PoseStamped start_pose;
     geometry_msgs::PoseStamped goal_pose;
     nav_msgs::GetPlan plan_;
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
     goal_pose.header.frame_id = "map";
     goal_pose.pose.position.x = 0.95702;
-    goal_pose.pose.position.y = -2.1984;
+    goal_pose.pose.position.y = -0.5;
     goal_pose.pose.orientation.z = -0.0500582073002107;
     goal_pose.pose.orientation.w = 0.9987463020616842;
     // TODO: Make the goal configurable by .yaml

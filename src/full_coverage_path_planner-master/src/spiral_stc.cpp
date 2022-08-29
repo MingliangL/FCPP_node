@@ -28,10 +28,10 @@ void SpiralSTC::initialize(std::string name, costmap_2d::Costmap2DROS* costmap_r
     cpp_grid_client_ = nh.serviceClient<nav_msgs::GetMap>("static_map");
 
     // Define  robot radius (radius) parameter
-    float robot_radius_default = 0.5f;
+    float robot_radius_default = 0.6f;
     private_named_nh.param<float>("robot_radius", robot_radius_, robot_radius_default);
     // Define  tool radius (radius) parameter
-    float tool_radius_default = 0.5f;
+    float tool_radius_default = 0.6f;
     private_named_nh.param<float>("tool_radius", tool_radius_, tool_radius_default);
     initialized_ = true;
   }

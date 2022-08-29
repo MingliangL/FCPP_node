@@ -2,6 +2,7 @@
 #include <tf2_ros/transform_listener.h>
 #include <iostream>
 #include <fstream>
+#include <stdio.h>
 
 // tf2_ros::Buffer& tf_fcpp_;
 costmap_2d::Costmap2DROS* fcpp_costmap_ros_;
@@ -42,6 +43,7 @@ bool planSrv(nav_msgs::GetPlan::Request &plan_req, nav_msgs::GetPlan::Response &
             point.pose.orientation.z << "," << point.pose.orientation.w << "\n" ;
     }
     path_file.close();
+    fcpp_plan.clear();
     
     return true; 
 }
