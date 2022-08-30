@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="FCPP/fcpp_planner/robot_radius" value="0.6"/>
+    <param name="FCPP/fcpp_planner/tool_radius" value = "0.4"/>
+    <node pkg="full_coverage_path_planner" name="FCPP" type="FCPP_node" output="screen"/>
+
+</launch>
